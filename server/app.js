@@ -3,7 +3,7 @@ const fileUpload = require('express-fileupload');
 const mongodb = require('mongodb');
 const {  MongoClient, ObjectId } = require('mongodb');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const dotenv = require('dotenv');
 dotenv.config();
