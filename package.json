@@ -1,4 +1,10 @@
 {
+  "name": "my-recipe-book",
+  "version": "1.0.0",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
@@ -7,3 +13,4 @@
     "mongodb": "^6.17.0"
   }
 }
+
