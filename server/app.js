@@ -3,7 +3,7 @@ const fileUpload = require('express-fileupload');
 const mongodb = require('mongodb');
 const {  MongoClient, ObjectId } = require('mongodb');
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -165,8 +165,8 @@ app.put('/recipes/:id', (req, res) => {
         });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
 
 

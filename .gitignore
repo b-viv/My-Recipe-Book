@@ -5,3 +5,7 @@
 .env.local
 
 node_modules/
+
+uploads/*
+!uploads/.gitkeep
+
