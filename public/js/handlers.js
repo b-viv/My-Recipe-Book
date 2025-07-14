@@ -30,8 +30,6 @@ export async function editRecipe(event) {
   const id = document.getElementById('editId').value;
   const res = await updateRecipe(id, formData);
 
-  // formData.set("title", capitalize(formData.get("title")));
-
   if (res.ok) {
     form.reset();
     document.querySelector(".cards").classList.add('hide');
@@ -51,7 +49,6 @@ export function fillEditForm(recipe) {
   document.getElementById("editIngredients").value = recipe.ingredients || "";
   document.getElementById("editDescription").value = recipe.description || "";
 }
-
 
 function capitalize(text) {
   return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();

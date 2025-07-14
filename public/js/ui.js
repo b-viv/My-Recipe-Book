@@ -21,7 +21,7 @@ export async function createRecipes() {
         <input type="hidden" name="id" id="recipeId" value="${recipe._id}">
         <h3>${recipe.title}</h3>
         <div class="recipe-image">
-            <img class="kep" src="${recipe.image}" alt="${recipe.title} image" loading="lazy">
+            <img class="recipe-image" src="${recipe.image}" alt="${recipe.title} image" loading="lazy" onerror="this.onerror=null; this.src='./assets/img/no_image.jpg';">
         </div>
       `;
       card.appendChild(recipeContainer);
