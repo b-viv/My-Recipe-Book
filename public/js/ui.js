@@ -15,11 +15,15 @@ export async function createRecipes() {
       const card = document.createElement("div");
       card.classList.add("card", "hide");
 
+      const shortTitle = recipe.title.length > 21
+        ? recipe.title.slice(0, 53) + "..."
+        : recipe.title;
+
       const recipeContainer = document.createElement("div");
       recipeContainer.classList.add("recipe-container");
       recipeContainer.innerHTML = `
         <input type="hidden" name="id" id="recipeId" value="${recipe._id}">
-        <h3>${recipe.title}</h3>
+        <h3>${shortTitle}</h3>
         <div class="recipe-image">
             <img class="recipe-image" src="${recipe.image}" alt="${recipe.title} image" loading="lazy" onerror="this.onerror=null; this.src='./assets/img/no_image.jpg';">
         </div>
