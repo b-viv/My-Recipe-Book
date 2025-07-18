@@ -4,7 +4,6 @@ import { createRecipes } from './ui.js';
 export async function addRecipe(event) {
   event.preventDefault();
   const form = event.target;
-  console.log(form);
   const formData = new FormData(form);
 
   formData.set("title", capitalize(formData.get("title")));
