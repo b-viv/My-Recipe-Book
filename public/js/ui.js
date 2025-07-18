@@ -2,7 +2,7 @@ import { getAllRecipes } from './api.js';
 import { handleCardClick } from './events.js';
 
 export let recipeData = [];
-let currentDisplayIndex = 30;
+let currentDisplayIndex = 36;
 
 export async function createRecipes() {
   try {
@@ -15,8 +15,8 @@ export async function createRecipes() {
       const card = document.createElement("div");
       card.classList.add("card", "hide");
 
-      const shortTitle = recipe.title.length > 21
-        ? recipe.title.slice(0, 53) + "..."
+      const shortTitle = recipe.title.length > 50
+        ? recipe.title.slice(0, 50) + "..."
         : recipe.title;
 
       const recipeContainer = document.createElement("div");
@@ -50,6 +50,6 @@ export function displayCards() {
   });
 }
 
-export function increaseCardDisplayCount(byAmount = 15) {
+export function increaseCardDisplayCount(byAmount = 12) {
   currentDisplayIndex += byAmount;
 }
